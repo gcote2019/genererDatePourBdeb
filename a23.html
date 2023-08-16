@@ -23,11 +23,8 @@
 </head>
 <body>
    <h3> Générer dates pour Automne 2023 </h3>
-   Lundi: <input id="Lundi" type="checkbox" /><br>
-   Mardi: <input id="Mardi" type="checkbox" /><br>
-   Mercredi: <input id="Mercredi" type="checkbox" /><br>
-   Jeudi: <input id="Jeudi" type="checkbox" /><br>
-   Vendredi: <input id="Vendredi" type="checkbox" /> <br>
+   <div id="checkboxes"></div>
+   <script>creerCheckboxes()</script>
    <button id="btn" onclick="genererDate( )"> Générer les dates </button> <br>
    <h3> Résultats: </h3>
    <div id="resultats"></div>

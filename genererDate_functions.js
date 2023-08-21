@@ -130,7 +130,7 @@ function verifierConge(jourCourant) {
 function obtenirJourDeLaSemaine(jourCourant) {
   let valeur = 0;
   for (let i = 0; i < exceptions.length && (valeur == 0); i++) {
-    if (jourCourant.valueOf() == exceptions[i].date) {
+    if (jourCourant.valueOf() == exceptions[i].date.valueOf()) {
       valeur = 1 << (exceptions[i].jour - 1);
     }
   }

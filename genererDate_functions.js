@@ -36,25 +36,35 @@ const tableau = [
 
 // javascript janvier est 0 et decembre est 11
 let conges = [
-  new Date(2023, Mois.Septembre, 4).valueOf(),
-  new Date(2023, Mois.Septembre, 19).valueOf(),
+  new Date(2024, Mois.Septembre, 2).valueOf(),
+  new Date(2024, Mois.Septembre, 19).valueOf(),
 
-  new Date(2023, Mois.Octobre, 9).valueOf(),
-  new Date(2023, Mois.Octobre, 19).valueOf(),
+  new Date(2024, Mois.Octobre, 11).valueOf(),
+  new Date(2024, Mois.Octobre, 14).valueOf(),
 
-  new Date(2023, Mois.Novembre, 10).valueOf(),
+  new Date(2024, Mois.Novembre, 1).valueOf(),
 
-  new Date(2023, Mois.Decembre, 4).valueOf(),
+  new Date(2024, Mois.Decembre, 4).valueOf(),
 ];
 
 let exceptions = [
-  {"date" : new Date(2023, Mois.Octobre, 11),
-  "jour" : Jours.Lundi
+  {"date" : new Date(2024, Mois.Aout, 21),
+    "jour" : Jours.Lundi
+  },
+  {"date" : new Date(2024, Mois.Aout, 26),
+    "jour" : Jours.Mercredi
+  },
+  {"date" : new Date(2024, Mois.Aout, 28),
+    "jour" : Jours.Lundi
+  },
+ 
+  {"date" : new Date(2024, Mois.Novembre, 5),
+  "jour" : Jours.Vendredi
   }
 ];
 
-let debut = new Date(2023, Mois.Aout, 21);
-let fin = new Date(2023, Mois.Decembre, 12).valueOf();
+let debut = new Date(2024, Mois.Aout, 21);
+let fin = new Date(2024, Mois.Decembre, 12).valueOf();
 
 function creerCheckboxes() {
   let div = document.getElementById("checkboxes");

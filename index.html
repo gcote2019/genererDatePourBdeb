@@ -20,7 +20,7 @@
          text-align: center;
       }
 
-      div.ex1 {
+      .ex1 {
          margin-left: 20px;
       }
    </style>
@@ -29,10 +29,15 @@
    <div class="ex1"><h3> Générer dates pour Automne 2024 </h3></div>
    <div id="checkboxes" class="ex1"></div>
    <script>creerCheckboxes()</script>
-   <div class="ex1"><img src="./a24.png" width="500"></div>
    
    <div class="ex1"><button id="btn" onclick="genererDate( )"> Générer les dates </button> <br></div>
    <div class="ex1"><h3> Résultats: </h3></div>
-   <div id="resultats" class="ex1"></div>
+   <table class="ex1">
+      <tr>
+         <td id="resultats" style="width:30%"></td>
+         <td><img src="./a24.png"></td>
+      </tr>
+   </table>
+   <div  class="ex1"></div>
 </body>
 </html>

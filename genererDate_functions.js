@@ -67,7 +67,7 @@ let exceptions = [
 ];
 
 let debut = new Date(annee_courante, Mois.Janvier, 20);
-let fin = new Date(annee_courante, Mois.Mai, 22).valueOf();
+let fin = new Date(annee_courante, Mois.Mai, 23).valueOf();
 
 function creerCheckboxes() {
   let div = document.getElementById("checkboxes");

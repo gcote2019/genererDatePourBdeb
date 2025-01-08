@@ -34,37 +34,40 @@ const tableau = [
   "Vendredi"
 ];
 
+let annee_courante = 2025
 // javascript janvier est 0 et decembre est 11
 let conges = [
-  new Date(2024, Mois.Septembre, 2).valueOf(),
-  new Date(2024, Mois.Septembre, 19).valueOf(),
+  new Date(annee_courante, Mois.Fevrier, 17).valueOf(),
+  new Date(annee_courante, Mois.Mars, 3).valueOf(),
+  new Date(annee_courante, Mois.Mars, 4).valueOf(),
+  new Date(annee_courante, Mois.Mars, 5).valueOf(),
+  new Date(annee_courante, Mois.Mars, 6).valueOf(),
+  new Date(annee_courante, Mois.Mars, 7).valueOf(),
+  new Date(annee_courante, Mois.Mars, 18).valueOf(),
 
-  new Date(2024, Mois.Octobre, 11).valueOf(),
-  new Date(2024, Mois.Octobre, 14).valueOf(),
+  new Date(annee_courante, Mois.Avril, 16).valueOf(),
+  new Date(annee_courante, Mois.Avril, 18).valueOf(),
 
-  new Date(2024, Mois.Novembre, 1).valueOf(),
+  new Date(annee_courante, Mois.Avril, 21).valueOf(),
 
-  new Date(2024, Mois.Decembre, 4).valueOf(),
+  new Date(annee_courante, Mois.Mai, 12).valueOf(),
+  new Date(annee_courante, Mois.Mai, 13).valueOf(),
+  new Date(annee_courante, Mois.Mai, 14).valueOf(),
+  new Date(annee_courante, Mois.Mai, 19).valueOf(),
 ];
 
 let exceptions = [
-  {"date" : new Date(2024, Mois.Aout, 21),
+  {"date" : new Date(annee_courante, Mois.Avril, 17),
     "jour" : Jours.Lundi
   },
-  {"date" : new Date(2024, Mois.Aout, 26),
-    "jour" : Jours.Mercredi
-  },
-  {"date" : new Date(2024, Mois.Aout, 28),
+  {"date" : new Date(annee_courante, Mois.Mai, 22),
     "jour" : Jours.Lundi
-  },
- 
-  {"date" : new Date(2024, Mois.Novembre, 5),
-  "jour" : Jours.Vendredi
+
   }
 ];
 
-let debut = new Date(2024, Mois.Aout, 21);
-let fin = new Date(2024, Mois.Decembre, 12).valueOf();
+let debut = new Date(annee_courante, Mois.Janvier, 20);
+let fin = new Date(annee_courante, Mois.Mai, 22).valueOf();
 
 function creerCheckboxes() {
   let div = document.getElementById("checkboxes");

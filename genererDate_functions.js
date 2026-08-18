@@ -190,7 +190,7 @@ function genererDate() {
         let bitwise = jour & jours;
         if (bitwise != 0) {
             resultats_1 += jourCourant.toISOString().split('T')[0] + "<br>";
-            resultats_2 += nom_jours[jourCourant.getDay()] + jourCourant.getDay() + " " + nom_mois[jourCourant.getMonth()];
+            resultats_2 += nom_jours[jourCourant.getDay()] + jourCourant.getDate() + " " + nom_mois[jourCourant.getMonth()] + "<br>";
         }
         jourCourant.setDate(jourCourant.getDate() + 1);
       }

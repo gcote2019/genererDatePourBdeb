@@ -26,6 +26,31 @@ const Mois = {
   Decembre : 11
 }
 
+const nom_mois = [
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Décembre"
+];
+
+const nom_jours = [
+  "Dimanche",
+  "Lundi",
+  "Mardi",
+  "Mercredi",
+  "Jeudi",
+  "Vendredi",
+  "Samedi"
+];
+
 const tableau = [
   "Lundi",
   "Mardi",
@@ -152,11 +177,11 @@ function genererDate() {
 
   try {
     let container = document.getElementById("resultats");
-    let resultats = "";
+    let resultats_1 = "";
+    let resultats_2 = "";
     if (jours != 0) {
       let jourCourant = new Date(debut);
       console.log(jourCourant.toISOString().split('T')[0]);
-      //while (jourCourant < fin) {
       while (jourCourant.valueOf() < fin) {
         while (jourCourant.getDay() == Jours.Dimanche || jourCourant.getDay() == Jours.Samedi || verifierConge(jourCourant)) {
           jourCourant.setDate(jourCourant.getDate() + 1);
@@ -164,12 +189,13 @@ function genererDate() {
         let jour = obtenirJourDeLaSemaine(jourCourant);
         let bitwise = jour & jours;
         if (bitwise != 0) {
-            resultats += jourCourant.toISOString().split('T')[0] + "<br>";
+            resultats_1 += jourCourant.toISOString().split('T')[0] + "<br>";
+            resultats_2 += nom_jours[jourCourant.getDay()] + jourCourant.getDay() + " " + nom_mois[jourCourant.getMonth()];
         }
         jourCourant.setDate(jourCourant.getDate() + 1);
       }
     }
-    container.innerHTML = resultats;
+    container.innerHTML = resultats_1 + "<br>" + resultats_2;
   } catch (error) {
     console.log("oups");
   }

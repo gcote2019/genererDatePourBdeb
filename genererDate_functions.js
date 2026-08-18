@@ -34,40 +34,32 @@ const tableau = [
   "Vendredi"
 ];
 
-let annee_courante = 2025
+let annee_courante = 2026
 // javascript janvier est 0 et decembre est 11
 let conges = [
-  new Date(annee_courante, Mois.Fevrier, 17).valueOf(),
-  new Date(annee_courante, Mois.Mars, 3).valueOf(),
-  new Date(annee_courante, Mois.Mars, 4).valueOf(),
-  new Date(annee_courante, Mois.Mars, 5).valueOf(),
-  new Date(annee_courante, Mois.Mars, 6).valueOf(),
-  new Date(annee_courante, Mois.Mars, 7).valueOf(),
-  new Date(annee_courante, Mois.Mars, 18).valueOf(),
-
-  new Date(annee_courante, Mois.Avril, 16).valueOf(),
-  new Date(annee_courante, Mois.Avril, 18).valueOf(),
-
-  new Date(annee_courante, Mois.Avril, 21).valueOf(),
-
-  new Date(annee_courante, Mois.Mai, 12).valueOf(),
-  new Date(annee_courante, Mois.Mai, 13).valueOf(),
-  new Date(annee_courante, Mois.Mai, 14).valueOf(),
-  new Date(annee_courante, Mois.Mai, 19).valueOf(),
+  new Date(annee_courante, Mois.Septembre, 7).valueOf(),
+  new Date(annee_courante, Mois.Octobre, 5).valueOf(),
+  new Date(annee_courante, Mois.Octobre, 12).valueOf(),
+  new Date(annee_courante, Mois.Octobre, 39).valueOf(),
+  new Date(annee_courante, Mois.Novembre, 20).valueOf(),
+  new Date(annee_courante, Mois.Decembre, 7).valueOf(),
+  new Date(annee_courante, Mois.Decembre, 8).valueOf(),
 ];
 
 let exceptions = [
-  {"date" : new Date(annee_courante, Mois.Avril, 17),
+  {"date" : new Date(annee_courante, Mois.Octobre, 6),
     "jour" : Jours.Lundi
   },
-  {"date" : new Date(annee_courante, Mois.Mai, 22),
+  {"date" : new Date(annee_courante, Mois.Octobre, 14),
     "jour" : Jours.Lundi
+  },  {"date" : new Date(annee_courante, Mois.Octobre, 29),
+    "jour" : Jours.Vendredi
 
   }
 ];
 
-let debut = new Date(annee_courante, Mois.Janvier, 20);
-let fin = new Date(annee_courante, Mois.Mai, 23).valueOf();
+let debut = new Date(annee_courante, Mois.Aout, 24);
+let fin = new Date(annee_courante, Mois.Decembre, 15).valueOf();
 
 function creerCheckboxes() {
   let div = document.getElementById("checkboxes");
